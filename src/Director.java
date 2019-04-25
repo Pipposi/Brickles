@@ -112,6 +112,7 @@ public class Director extends JPanel implements CollisionListener, ActionListene
         game.add(makeGamePanel(), BorderLayout.CENTER);
 
         setWindowLayout(window, game);
+        makeNoise();
 
         powerUpTimer = new Timer(100, (ActionEvent e) -> {
             //Handles user power-up for a set time limit
@@ -274,7 +275,7 @@ public class Director extends JPanel implements CollisionListener, ActionListene
             //Plays custom sound when brick is hit. Allpies power-ups or power-downs based on which brick is hit. 
             //Handles scores for hititng specific bricks
             case CollisionEvent.BRICK:
-                makeNoise();
+                
                 Color brickColor = wall.getBrick(e.getRow(), e.getColumn());            
                 wall.setBrick(e.getRow(), e.getColumn(), null);                         
                 bricksHit++;
