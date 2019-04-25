@@ -17,7 +17,7 @@ public class MusicPlayer extends Thread {
 
     public static void main(String[] args) {
         try {
-            File file = new File("");
+            File file = new File("Everlong 8bit.mp3");
             FileInputStream fis = new FileInputStream(file);
             BufferedInputStream bis = new BufferedInputStream(fis);
 
@@ -39,7 +39,7 @@ public class MusicPlayer extends Thread {
     public void run() {
 
         try {
-            File file = new File("");
+            File file = new File("Everlong 8bit.mp3");
             FileInputStream fis = new FileInputStream(file);
             BufferedInputStream bis = new BufferedInputStream(fis);
 
